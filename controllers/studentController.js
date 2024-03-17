@@ -26,7 +26,7 @@ router.post('/register', async (req, res) => {
 
     try {
         const student = await Student.create(req.body);
-        res.status(200).send({ message: "Stdent Added Succesfully!", student: student });
+        res.status(200).send({ message: "Student Added Succesfully!", student: student });
     } catch (error) {
         return res.status(400).send({ message: error.message });
     }
